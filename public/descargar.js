@@ -6,7 +6,6 @@ document.querySelector('#exportar').onclick = function(){
 }
 
 
-
 function exportarr(cipher, nombreFile){
     const a = document.createElement("a");
     const contenido = cipher,
