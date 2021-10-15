@@ -12,7 +12,7 @@
 
 .titulo{
     text-align: center;
-    margin-top: 5%;
+    margin-top: 4.9%;
 }
 
 .link{
@@ -22,5 +22,5 @@
 }
 
 #nombre{
-    color: gray;
+    color: rgb(85, 85, 85);
 }
