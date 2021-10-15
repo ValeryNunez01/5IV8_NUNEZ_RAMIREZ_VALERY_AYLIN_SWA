@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="estilos.css" rel="stylesheet">
+    <title>Descifrado con AES</title>
+</head>
+<body>
+
+    <h1 class="titulo">Descifrado con AES</h1>
+
+
+    <div class="contenedor">
+
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Descifrado con AES-256
+            </button>
+          </h2>
+
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <form method="post" action="/descifrar256">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Selección de archivo a descifrar</label>
+                    <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Texto cifrado</label>
+                    <input type="text" class="form-control" id="texto-cifrado1" aria-describedby="emailHelp" name="textoci1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Llave</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="llaveUno">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword3" class="form-label">IV</label>
+                    <input type="text" class="form-control" id="exampleInputPassword3" name="ivUno">
+                  </div>
+                  <br>
+                  <button type="submit" class="btn btn-primary">Descifrar</button>
+                </form>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Descifrado con AES-192
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              
+              <form method="post" action="/descifrar192">
+                <div class="mb-3">
+                  <label for="exampleInputEmail2" class="form-label">Selección de archivo a descifrar</label>
+                  <input type="file" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" >
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail2" class="form-label">Texto cifrado</label>
+                  <input type="text" class="form-control" id="texto-cifrado2" aria-describedby="emailHelp" name="textoci2">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Llave</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="llaveDos">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword3" class="form-label">IV</label>
+                  <input type="text" class="form-control" id="exampleInputPassword3" name="ivDos">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Descifrar</button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Descifrado con AES-128
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <form method="post" action="/descifrar128">
+                <div class="mb-3">
+                  <label for="exampleInputEmail3" class="form-label">Selección de archivo a descifrar</label>
+                  <input type="file" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" >
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail3" class="form-label">Texto cifrado</label>
+                  <input type="text" class="form-control" id="texto-cifrado3" aria-describedby="emailHelp" name="textoci3">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Llave</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="llaveTres">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword3" class="form-label">IV</label>
+                  <input type="text" class="form-control" id="exampleInputPassword3" name="ivTres">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Descifrar</button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <a class="link" href="index.html">¡Pica aquí para cifrar!</a>
+      <br>
+      <br>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('#exampleInputEmail1').addEventListener('change', leerArhivo1, false);
+
+        function leerArhivo1(e){
+            const archivo = e.target.files[0];
+            if(!archivo){
+                return;
+            }
+            const lector = new FileReader();
+            lector.onload = function(e){
+                const contenido = e.target.result;
+                mostrarContenido1(contenido);
+            };
+            lector.readAsText(archivo);
+        }
+
+        function mostrarContenido1(contenido){
+            const element = document.getElementById('texto-cifrado1').value = contenido;
+        }
+
+
+
+        document.querySelector('#exampleInputEmail2').addEventListener('change', leerArhivo2, false);
+
+        function leerArhivo2(e){
+            const archivo = e.target.files[0];
+            if(!archivo){
+                return;
+            }
+            const lector = new FileReader();
+            lector.onload = function(e){
+                const contenido = e.target.result;
+                mostrarContenido2(contenido);
+            };
+            lector.readAsText(archivo);
+        }
+
+        function mostrarContenido2(contenido){
+            const element = document.getElementById('texto-cifrado2').value = contenido;
+        }
+
+
+        document.querySelector('#exampleInputEmail3').addEventListener('change', leerArhivo3, false);
+
+        function leerArhivo3(e){
+            const archivo = e.target.files[0];
+            if(!archivo){
+                return;
+            }
+            const lector = new FileReader();
+            lector.onload = function(e){
+                const contenido = e.target.result;
+                mostrarContenido3(contenido);
+            };
+            lector.readAsText(archivo);
+        }
+
+        function mostrarContenido3(contenido){
+            const element = document.getElementById('texto-cifrado3').value = contenido;
+        }
+
+    </script>
+
+</body>
+</html>
